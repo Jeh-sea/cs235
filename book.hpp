@@ -17,17 +17,17 @@ class Book
 
     public: //only accessor and mutator functions
         Book();
-        Book(string Title, string Author, int PageCount, bool Digital);
+        Book(string Title, string Author, int PageCount, bool Digital = false);
 
         string getTitle();
         string getAuthor();
         int getPageCount();
-        bool isDigital(string Title);
+        bool isDigital();
 
         void setTitle(string Title);
         void setAuthor(string Author);
         void setPageCount(int PageCount);
-        void setDigital(bool Digital);
+        void setDigital(bool Digital = false);
 };
 
 #endif
