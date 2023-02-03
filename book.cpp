@@ -1,6 +1,6 @@
 #include "Book.hpp"
 
-//2/3 changes
+// 2/3
 
 Book::Book() {
     Title = "";
