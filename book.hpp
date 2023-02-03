@@ -30,4 +30,5 @@ class Book
         void setDigital(bool Digital = false);
 };
 
+
 #endif
