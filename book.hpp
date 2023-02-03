@@ -16,13 +16,14 @@ class Book
         bool Digital;
 
     public: //only accessor and mutator functions
-        Book();
-        Book(string Title, string Author, int PageCount, bool Digital = false);
 
-        string getTitle();
-        string getAuthor();
-        int getPageCount();
-        bool isDigital();
+        Book();
+        Book(const string &Title, const string &Author, int PageCount, bool Digital = false);
+    
+        string getTitle() const;
+        string getAuthor() const;
+        int getPageCount() const;
+        bool isDigital() const;
 
         void setTitle(string Title);
         void setAuthor(string Author);

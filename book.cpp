@@ -9,37 +9,37 @@ Book::Book() {
     Digital = false; 
 }
 
-Book::Book(string Title, string Author, int PageCount, bool Digital) {
+Book::Book(const string &Title, const string &Author, int PageCount, bool Digital) {
     this->Title = Title; 
     this->Author = Author; 
     this->PageCount = PageCount; 
     this->Digital = Digital; 
 }
 
-string Book::getTitle() {
+string Book::getTitle() const {
     return this->Title; 
 }
 
-string Book::getAuthor() {
+string Book::getAuthor() const {
     return this->Author; 
 }
 
-int Book::getPageCount() {
+int Book::getPageCount() const {
     return this->PageCount; 
 }
 
-bool Book::isDigital() { //unsure about this
+bool Book::isDigital() const { 
     if (this->Title == Title) {
         return (this->Digital);
     }
     return false; 
 }
 
-void Book::setTitle(string Title) {
+void Book::setTitle(const string Title) {
     this->Title = Title; 
 }
 
-void Book::setAuthor(string Author) {
+void Book::setAuthor(const string Author) {
     this->Author = Author; 
 }
 
