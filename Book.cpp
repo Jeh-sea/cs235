@@ -43,7 +43,7 @@ void Book::setAuthor(const string Author) {
     this->Author = Author; 
 }
 
-void Book::setPageCount(int PageCount) {
+void Book::setPageCount(const int PageCount) {
     if (PageCount > 0) {
         this->PageCount = PageCount;
     }
