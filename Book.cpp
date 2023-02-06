@@ -9,7 +9,7 @@ Book::Book() {
     Digital = false; 
 }
 
-Book::Book(const string &Title, const string &Author, int PageCount, bool Digital) {
+Book::Book(const string &Title, const string &Author, const int &PageCount, const bool &Digital = false) {
     this->Title = Title; 
     this->Author = Author; 
     this->PageCount = PageCount; 
@@ -17,40 +17,37 @@ Book::Book(const string &Title, const string &Author, int PageCount, bool Digita
 }
 
 string Book::getTitle() const {
-    return this->Title; 
+    return Title; 
 }
 
 string Book::getAuthor() const {
-    return this->Author; 
+    return Author; 
 }
 
 int Book::getPageCount() const {
-    return this->PageCount; 
+    return PageCount; 
 }
 
 bool Book::isDigital() const { 
-    if (this->Title == Title) {
-        return (this->Digital);
-    }
-    return false; 
+    return Digital; 
 }
 
-void Book::setTitle(const string Title) {
-    this->Title = Title; 
+void Book::setTitle(const string newTitle) {
+    Title = newTitle; 
 }
 
-void Book::setAuthor(const string Author) {
-    this->Author = Author; 
+void Book::setAuthor(const string newAuthor) {
+    Author = newAuthor; 
 }
 
-void Book::setPageCount(const int PageCount) {
-    if (PageCount > 0) {
-        this->PageCount = PageCount;
+void Book::setPageCount(const int newPageCount) {
+    if (newPageCount > 0) {
+        PageCount = newPageCount;
     }
 }
 
-void Book::setDigital(bool Digital) {
-    this->Digital = Digital; 
+void Book::setDigital(const bool newDigital) {
+    Digital = newDigital; 
 }
 
 int main() {

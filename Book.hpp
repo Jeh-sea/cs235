@@ -18,7 +18,7 @@ class Book
     public: //only accessor and mutator functions
 
         Book();
-        Book(const string &Title, const string &Author, int PageCount, bool Digital = false);
+        Book(const string &Title, const string &Author, const int &PageCount, const bool &Digital);
     
         string getTitle() const;
         string getAuthor() const;
