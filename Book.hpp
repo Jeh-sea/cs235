@@ -2,6 +2,7 @@
 #define BOOK_HPP_
 
 #include <iostream>
+#include <string>
 using namespace std; 
 
 // Every Book has a title, an author, the page count, 
@@ -18,18 +19,17 @@ class Book
     public: //only accessor and mutator functions
 
         Book();
-        Book(const string &Title, const string &Author, const int &PageCount, const bool &Digital);
+        Book(const string &Title, const string &Author, const int &PageCount, const bool &Digital = false);
     
         string getTitle() const;
         string getAuthor() const;
         int getPageCount() const;
         bool isDigital() const;
 
-        void setTitle(string Title);
-        void setAuthor(string Author);
-        void setPageCount(int PageCount);
-        void setDigital(bool Digital = false);
+        void setTitle(const string &Title);
+        void setAuthor(const string &Author);
+        void setPageCount(const int &PageCount);
+        void setDigital(const bool &Digital = false);
 };
-
 
 #endif

@@ -1,6 +1,6 @@
 #include "Book.hpp"
 
-// 2/5 changes
+// 2/6 changes
 
 Book::Book() {
     Title = "";
@@ -9,7 +9,7 @@ Book::Book() {
     Digital = false; 
 }
 
-Book::Book(const string &Title, const string &Author, const int &PageCount, const bool &Digital = false) {
+Book::Book(const string &Title, const string &Author, const int &PageCount, const bool &Digital) {
     this->Title = Title; 
     this->Author = Author; 
     this->PageCount = PageCount; 
@@ -32,21 +32,21 @@ bool Book::isDigital() const {
     return Digital; 
 }
 
-void Book::setTitle(const string newTitle) {
+void Book::setTitle(const string &newTitle) {
     Title = newTitle; 
 }
 
-void Book::setAuthor(const string newAuthor) {
+void Book::setAuthor(const string &newAuthor) {
     Author = newAuthor; 
 }
 
-void Book::setPageCount(const int newPageCount) {
+void Book::setPageCount(const int &newPageCount) {
     if (newPageCount > 0) {
         PageCount = newPageCount;
     }
 }
 
-void Book::setDigital(const bool newDigital) {
+void Book::setDigital(const bool &newDigital) {
     Digital = newDigital; 
 }
 
@@ -93,4 +93,6 @@ int main() {
     std::cout << my_book3.getTitle() << " By " << my_book3.getAuthor()
         << " with page count " << my_book3.getPageCount() << std::endl;
     std::cout << "Digital: " << my_book3.isDigital() << std::endl;
+
+    return 0; 
 }
